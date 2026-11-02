@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio Saya</title>
+
+    <!-- Google Fonts (Outfit untuk Judul & Plus Jakarta Sans untuk Teks) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS Lokal -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Kustomisasi Warna & Tipografi -->
+    <style>
+      /* Penerapan Font Unik & Mudah Dibaca */
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        color: #334155;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .navbar-brand {
+        font-family: "Outfit", sans-serif;
+        letter-spacing: -0.5px;
+      }
+
+      /* Latar Belakang Biru Tua Bergradasi Cerah */
+      .bg-custom-blue {
+        background: linear-gradient(
+          135deg,
+          #0f172a 0%,
+          #1e3a8a 50%,
+          #2563eb 100%
+        );
+      }
+
+      /* Efek Card Interaktif */
+      .card {
+        border: none;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <!-- 1. KOMPONEN NAVBAR -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-4" href="#">Portofolio</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto fw-semibold">
+            <li class="nav-item">
+              <a class="nav-link active" href="#profil">Profil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#proyek">Proyek</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#kontak">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 2. HERO SECTION: FOTO, NAMA, & IDENTITAS -->
+    <header id="profil" class="bg-custom-blue text-white py-5 text-center">
+      <div class="container py-4">
+        <!-- Foto Profil -->
+        <img
+          src="Presiden Habib new.jpeg"
+          alt="Foto Profil"
+          class="rounded-circle img-thumbnail mb-3 shadow-lg"
+          width="150"
+          height="150"
+        />
+        <!-- Nama & Identitas -->
+        <h1 class="display-4 fw-extrabold text-white">Abdullah Habib</h1>
+        <p class="fs-5 text-info fw-semibold mb-2">
+          NIM: 2511501001 | Teknologi Informasi
+        </p>
+        <p class="lead col-md-8 mx-auto text-light opacity-90">
+          Mahasiswa yang berfokus pada pengawasan antarmuka web modern dan
+          responsif berbasis Bootstrap, Figma, dan aplikasi lainnya.
+        </p>
+        <!-- KOMPONEN BTN -->
+        <a
+          href="#proyek"
+          class="btn btn-info text-dark fw-bold px-4 py-2 mt-2 rounded-pill shadow-sm"
+          >Lihat Proyek</a
+        >
+      </div>
+    </header>
+
+    <!-- 3. SECTION PROYEK: CONTAINER, ROW, DAN CARD -->
+    <section id="proyek" class="py-5">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-4 display-6">Bidang yang Dikuasai</h2>
+
+        <!-- KOMPONEN ROW (GRID SYSTEM RESPONSIF) -->
+        <div class="row g-4">
+          <!-- KOMPONEN CARD 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm rounded-3 overflow-hidden">
+              <img src="Desain Figma.png" class="card-img-top" alt="Proyek 1" />
+              <div class="card-body d-flex flex-column p-4">
+                <h5 class="card-title fw-bold">Desain Web Toko Online</h5>
+                <p class="card-text text-muted">
+                  Pembuatan layout desain untuk membantu memajukan UMKM
+                  menggunakan Figma.
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-outline-primary mt-auto fw-semibold rounded-2"
+                  >Detail Proyek</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- KOMPONEN CARD 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm rounded-3 overflow-hidden">
+              <img src="Gambar HTML.png" class="card-img-top" alt="Proyek 2" />
+              <div class="card-body d-flex flex-column p-4">
+                <h5 class="card-title fw-bold">
+                  Manipulasi HTML, CSS, dan JavaScript
+                </h5>
+                <p class="card-text text-muted">
+                  Merancang desain Web dengan menggunakan HTML, menyempurnakan
+                  tampilan dengan CSS, dan memberikan nyawa dengan JavaScript.
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-outline-primary mt-auto fw-semibold rounded-2"
+                  >Detail Proyek</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- KOMPONEN CARD 3 -->
+          <div class="col-12 col-md-12 col-lg-4">
+            <div class="card h-100 shadow-sm rounded-3 overflow-hidden">
+              <img src="Database.png" class="card-img-top" alt="Proyek 3" />
+              <div class="card-body d-flex flex-column p-4">
+                <h5 class="card-title fw-bold">Manipulasi Database</h5>
+                <p class="card-text text-muted">
+                  Merancang dan memange Database secara real time menggunakan
+                  DBeaver.
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-outline-primary mt-auto fw-semibold rounded-2"
+                  >Detail Proyek</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SECTION KONTAK (FORM INPUT) -->
+    <section id="kontak" class="bg-white py-5 border-top">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6">
+            <h2 class="text-center fw-bold mb-4 display-6">Hubungi Saya</h2>
+            <form>
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Nama</label>
+                <input
+                  type="text"
+                  class="form-control form-control-lg fs-6"
+                  placeholder="Masukkan nama"
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Email</label>
+                <input
+                  type="email"
+                  class="form-control form-control-lg fs-6"
+                  placeholder="Masukkan email"
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Pesan</label>
+                <textarea
+                  class="form-control form-control-lg fs-6"
+                  rows="3"
+                  placeholder="Tuliskan pesan..."
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary btn-lg w-100 fw-bold fs-6 mt-2"
+              >
+                Kirim Pesan
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-3">
+      <p class="mb-0 text-secondary">
+        &copy; 2026 Abdullah Habib. All rights reserved.
+      </p>
+    </footer>
+
+    <!-- Bootstrap JS Lokal -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
